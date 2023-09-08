@@ -5,6 +5,10 @@ const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+    res.redirect("/bhfl");
+});
+
 app.get("/bhfl",(req,res)=>{
     try{
         return res.status(200).send({operation_code : 1})
